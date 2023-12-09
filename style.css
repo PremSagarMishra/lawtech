@@ -87,7 +87,7 @@
 }
 
 .home{
-    height: 100vh;
+    height: fit-content;
     padding: 100px 10rem;
 
     
@@ -382,9 +382,11 @@ text-shadow: 1px grey;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    height: fit-content;
 }
 .plans .card{
     width: 300px;
+    height: fit-content;
     border: 2px solid grey;
     border-radius: 50px;
     box-shadow:  2px 2px 3px 3px grey;
@@ -538,7 +540,7 @@ width: 50%;
         font-size: 24px;
     }
     nav{
-        
+        border-top: 2px solid black;
         position: fixed;
         bottom: 0;
         background-color: white;
@@ -608,6 +610,7 @@ width: 50%;
     .plans .card{
         width: 100%;
         margin: 20px;
+        height: fit-content;
     }
 
     .contactform {
@@ -633,3 +636,195 @@ width: 50%;
     }
 }
 
+
+@media only screen and (max-width:768px){
+    .nav{
+        z-index: 2;
+        padding :10px;
+        background-color: white;
+    }
+
+    
+    *{
+        box-sizing: border-box;
+        
+    }
+    .login,
+    .login i{
+        font-size: 24px;
+    }
+    nav{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 2px solid black;
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+        width: 100%;
+        left: 0;
+        justify-content: center;
+    }
+    nav li a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav nav li:hover a i,
+    .nav nav li:focus a i
+    .nav nav li a i{
+        text-decoration: none;
+        color: black;
+    list-style-type: none;
+    font-size: 16px;
+    transition: 0.2s ease;
+    }
+
+    .nav nav li:hover ,
+    .nav nav .active,
+    .nav nav .active i,
+    .nav nav li a.active span,
+    .nav nav li a.active i
+    {
+
+        color: var(--main-color);
+        font-weight: 800;
+        transform: scale(1.02, 1.02);
+        
+    }
+    
+    .home{
+        margin-top: 50px;
+        padding: 20px;
+    }
+    .home .container{
+        flex-direction: column-reverse;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home .container .left,
+    .home .container .right{
+        width: 100%;
+
+    }
+
+    .course{
+        padding: 20px;
+    }
+
+
+
+    .course .card{
+        width: 100%;
+        height: fit-content;
+        padding:10px;
+        flex-direction: column;
+    }
+
+    .course .card h1,
+    .course .card2 h1{
+        font-size: 20px;
+    }
+    .course .card  li,
+    .course .card2  li{
+        font-size: 14px;
+    }
+    
+    .course .card img,
+    .course .card2 img{
+        border-radius: 20px;
+    }
+
+    .course .card .left,
+    .course .card .right,
+    .course .card2 .left,
+    .course .card2 .right{
+        width: 100%;
+        height: fit-content;
+        padding: 20px;
+    }
+
+    .course .card2{
+        width: 100%;
+        height: fit-content;
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+    .membership{
+        
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+    .membership .left{
+        width: 100%;
+        padding: 10px;
+
+    }
+    .membership .right{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .testimonials{
+        padding: 0;
+    }
+    .testimonials .heading{
+        padding: 10px;
+    }
+    
+    .testimonials .container .card{
+        width: 100%;
+        height: fit-content;
+        border: 2px solid red;
+        padding: 40px;
+        margin: 20px;
+    }
+
+
+    .plans .heading{
+        width: 100%;
+        padding:0;
+    }
+    .plans{
+        padding: 0%;
+    }
+
+    .plans .card{
+        width: fit-content;
+        margin: 20px;
+        height: fit-content;
+    }
+
+    .contact{
+        padding: 0;
+    }
+
+    .contactform {
+        flex-direction: column-reverse;
+        padding: 0%;
+    }
+    .contactform .left,
+    .contactform .right{
+        width: 100%;
+        padding: 10px;
+    }
+    .contactform .left{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contactform i{
+        font-size: 40px;
+    }
+    .contactform h4{
+        font-size: 24px;
+        
+    }
+    .contactform p{
+        font-size: 12px;
+    }
+}
